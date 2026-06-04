@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FoodExpress | Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">🍔 FoodExpress</div>
+  <div class="nav-links">
+    <a href="catalog.html">Menu</a>
+    <a href="cart.html">Cart <span id="cart-count">0</span></a>
+    <a href="index.html" onclick="logout()">Logout</a>
+  </div>
+</nav>
+
+<div class="cart-box">
+  <h2>Your Cart 🛒</h2>
+
+  <div id="cart-items">
+    <!-- Cart items will be injected here dynamically -->
+  </div>
+
+  <div class="cart-total">
+    <strong>Total</strong>
+    <strong id="cart-total">₹0</strong>
+  </div>
+
+  <button onclick="checkout()">Checkout</button>
+</div>
+
+<script src="script.js"></script>
+<script>
+  // Redirect if not logged in
+  if (!localStorage.getItem("loggedInUser")) {
+    alert("Please login first!");
+    window.location.href = "login.html";
+  }
+
+  // Function for checkout
+  function checkout() {
+    if(cart.length === 0) {
+      alert("Your cart is empty!");
+      return;
+    }
+    alert("Checkout successful! Total: ₹" + cart.reduce((sum,item)=>sum+item.price*item.qty,0));
+    cart = [];
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+    updateCartCount();
+  }
+
+  // Load cart items on page load
+  loadCart();
+  updateCartCount();
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FoodExpress | Signup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">🍔 FoodExpress</div>
+  <div class="nav-links">
+    <a href="index.html" onclick="logout()">Logout</a>
+  </div>
+</nav>
+
+<div class="center-card">
+  <h2>Create Account</h2>
+
+  <form onsubmit="return validateRegister()">
+    <input type="text" id="regName" placeholder="Full Name">
+    <span class="error" id="nameError"></span>
+
+    <input type="email" id="regEmail" placeholder="Email">
+    <span class="error" id="emailError"></span>
+
+    <input type="password" id="regPassword" placeholder="Password">
+    <span class="error" id="passwordError"></span>
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FoodExpress | Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">🍔 FoodExpress</div>
+  <div class="nav-links">
+    <a href="catalog.html">Menu</a>
+    <a href="cart.html">Cart <span id="cart-count">0</span></a>
+    <a href="index.html" onclick="logout()">Logout</a>
+  </div>
+</nav>
+
+<h2 class="page-title">Today’s Specials 🍽️</h2>
+
+<div class="catalog">
+
+  <div class="item-card">
+    <img src="images/food/biryani.jpg">
+    <h3>Chicken Biryani</h3>
+    <p>₹249</p>
+    <button onclick="addToCart('Chicken Biryani', 249, 'images/food/biryani.jpg')">Add</button>
+  </div>
+
+  <div class="item-card">
+    <img src="images/food/pizza.jpg">
+    <h3>Pizza</h3>
+    <p>₹199</p>
+    <button onclick="addToCart('Pizza', 199, 'images/food/pizza.jpg')">Add</button>
+  </div>
+
+  <div class="item-card">
+    <img src="images/food/pasta.jpg">
+    <h3>Pasta</h3>
+    <p>₹179</p>
+    <button onclick="addToCart('Pasta', 179, 'images/food/pasta.jpg')">Add</button>
+  </div>
+
+  <div class="item-card">
+    <img src="images/food/noodles.jpg">
+    <h3>Noodles</h3>
+    <p>₹149</p>
+    <button onclick="addToCart('Noodles', 149, 'images/food/noodles.jpg')">Add</button>
+  </div>
+
+  <div class="item-card">
+    <img src="images/food/burger.jpg">
+    <h3>Cheese Burger</h3>
+    <p>₹129</p>
+    <button onclick="addToCart('Cheese Burger', 129, 'images/food/burger.jpg')">Add</button>
+  </div>
+
+  <div class="item-card">
+    <img src="images/food/grilled sandwich.jpg">
+    <h3>Grilled Sandwich</h3>
+    <p>₹119</p>
+    <button onclick="addToCart('Grilled Sandwich', 119, 'images/food/grilled sandwich.jpg')">Add</button>
+  </div>
+
+  <div class="item-card">
+    <img src="images/food/french fries.jpg">
+    <h3>French Fries</h3>
+    <p>₹99</p>
+    <button onclick="addToCart('French Fries', 99, 'images/food/french fries.jpg')">Add</button>
+  </div>
+
+  <div class="item-card">
+    <img src="images/food/cheese cake.jpg">
+    <h3>Cheese Cake</h3>
+    <p>₹89</p>
+    <button onclick="addToCart('Cheese Cake', 89, 'images/food/cheese cake.jpg')">Add</button>
+  </div>
+
+  <div class="item-card">
+    <img src="images/food/icecream.jpg">
+    <h3>Chocolate Icecream</h3>
+    <p>₹79</p>
+    <button onclick="addToCart('Chocolate Icecream', 79, 'images/food/icecream.jpg')">Add</button>
+  </div>
+
+  <div class="item-card">
+    <img src="images/food/coke.jpg">
+    <h3>Coke</h3>
+    <p>₹49</p>
+    <button onclick="addToCart('Coke', 49, 'images/food/coke.jpg')">Add</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+  // Redirect if not logged in
+  if (!localStorage.getItem("loggedInUser")) {
+    alert("Please login first!");
+    window.location.href = "login.html";
+  }
+</script>
+</body>
+</html>
