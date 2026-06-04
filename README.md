@@ -1,3 +1,4 @@
+
 # Food Express – Responsive Shopping Cart Web Application
 
 ## Project Overview
@@ -153,3 +154,5 @@ The project contains screenshots of:
 ## Conclusion
 
 The Food Express application was successfully developed using HTML5, CSS3, and JavaScript with responsive web design principles. The project demonstrates frontend web development concepts such as responsive layouts, client-side validation, DOM manipulation, and shopping cart functionality using localStorage.
+
+
