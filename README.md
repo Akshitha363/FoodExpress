@@ -1,63 +1,111 @@
+# 🍔 FoodExpress
 
-# Food Express – Responsive Shopping Cart Web Application
+### Responsive Food Ordering Web Application
 
-## Project Overview
+FoodExpress is a **responsive frontend food ordering web application** built with **HTML5, CSS3, and JavaScript**. It provides a complete client-side shopping experience with user login and registration interfaces, a food catalog, shopping cart management, form validation, and browser-based data persistence using `localStorage`.
 
-Food Express is a responsive food ordering web application developed using HTML5, CSS3, and JavaScript.
-The application provides essential food ordering functionalities such as user login, registration, food catalog display, and shopping cart management.
-
-The project mainly focuses on creating a clean and user-friendly interface while implementing responsive web design and client-side functionality using JavaScript.
+The project demonstrates practical frontend development concepts including responsive layouts, DOM manipulation, client-side validation, and dynamic cart functionality.
 
 ---
 
-## Features
+## 🌐 Live Demo
 
-* User Home Page
-* User Login Page
-* User Registration Page
-* Food Menu Catalog
-* Shopping Cart Interface
-* Add to Cart Functionality
-* Quantity Management
-* Total Price Calculation
-* Client-side Form Validation
-* Responsive Design for Multiple Devices
-* Clean and Attractive UI
+**[FoodExpress – Live Application](https://food-express-one-brown.vercel.app/)**
 
 ---
 
-## Technologies Used
+## ✨ Features
 
-* HTML5
-* CSS3
-* JavaScript
+### 👤 User Interface
+
+* Responsive home page
+* Login interface
+* User registration interface
+* Food catalog
+* Food item cards with images and prices
+* Responsive navigation
+
+### 🛒 Shopping Cart
+
+* Add products to cart
+* Increase or decrease product quantity
+* Remove products from cart
+* Dynamic total price calculation
+* Cart data persistence using `localStorage`
+
+### ✅ Client-Side Functionality
+
+* Form validation
+* DOM manipulation
+* Dynamic content updates
+* Responsive design
+* Interactive buttons and navigation
 
 ---
 
-## Project Structure
+## 🛠️ Tech Stack
+
+| Technology   | Purpose                            |
+| ------------ | ---------------------------------- |
+| HTML5        | Page structure and content         |
+| CSS3         | Styling and responsive layouts     |
+| JavaScript   | Application logic and interactions |
+| localStorage | Client-side cart data persistence  |
+| Vercel       | Frontend deployment                |
+| Git & GitHub | Version control                    |
+
+---
+
+## 🏗️ Application Flow
 
 ```text
-WEEK3/
-│
-├── index.html
-├── login.html
-├── register.html
-├── catalog.html
-├── cart.html
-├── style.css
-├── script.js
+                    ┌─────────────────────┐
+                    │        User         │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │     FoodExpress     │
+                    │    Web Interface    │
+                    └──────────┬──────────┘
+                               │
+             ┌─────────────────┼─────────────────┐
+             ▼                 ▼                 ▼
+       ┌───────────┐     ┌───────────┐     ┌───────────┐
+       │   Login   │     │  Catalog  │     │ Register  │
+       └───────────┘     └─────┬─────┘     └───────────┘
+                               │
+                               ▼
+                       ┌───────────────┐
+                       │  Add to Cart  │
+                       └───────┬───────┘
+                               │
+                               ▼
+                       ┌───────────────┐
+                       │ Shopping Cart │
+                       │   & Totals    │
+                       └───────┬───────┘
+                               │
+                               ▼
+                       ┌───────────────┐
+                       │  localStorage │
+                       └───────────────┘
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+FoodExpress/
 │
 ├── images/
-│   ├── biryani.jpg
-│   ├── pizza.jpg
-│   ├── pasta.jpg
-│   ├── noodles.jpg
-│   ├── burger.jpg
-│   ├── grilled sandwich.jpg
-│   ├── French fries.jpg
-│   ├── cheese cake.jpg
-│   ├── icecream.jpg
-│   └── coke.jpg
+│   └── food/
+│       ├── biryani.jpg
+│       ├── pizza.jpg
+│       ├── pasta.jpg
+│       ├── noodles.jpg
+│       └── ...
 │
 ├── screenshots/
 │   ├── homepage3.jpg
@@ -67,92 +115,155 @@ WEEK3/
 │   ├── menu page3.2.jpg
 │   └── cart page3.jpg
 │
+├── index.html
+├── login.html
+├── register.html
+├── catalog.html
+├── cart.html
+├── style.css
+├── script.js
+├── WAD WEEK3 DOCUMENTATION.pdf
+├── LICENSE
 └── README.md
 ```
 
 ---
 
-## Description of Pages
+## 📄 Application Pages
 
-### index.html – Home Page
+### 🏠 Home Page — `index.html`
 
-* Displays the welcome screen for Food Express
-* Provides navigation to Login and Register pages
-* Includes attractive UI elements and responsive layout
+* Provides the main landing page
+* Displays navigation options
+* Provides access to login and registration
+* Uses a responsive layout
 
-### login.html – Login Page
+### 🔐 Login Page — `login.html`
 
-* Allows users to enter email and password
-* Includes form validation
-* Uses centered card-based design
+* Provides email and password fields
+* Performs client-side validation
+* Uses a responsive form layout
 
-### register.html – Registration Page
+### 📝 Registration Page — `register.html`
 
-* Allows new users to create accounts
-* Includes validation for user inputs
-* Uses clean responsive form layout
+* Allows users to enter registration details
+* Performs client-side input validation
+* Provides a responsive registration interface
 
-### catalog.html – Food Menu Page
+### 🍕 Food Catalog — `catalog.html`
 
-* Displays available food items with images and prices
-* Uses responsive grid layout
+* Displays available food items
+* Shows product images and prices
+* Uses a responsive grid layout
 * Provides Add to Cart functionality
 
-### cart.html – Shopping Cart Page
+### 🛒 Shopping Cart — `cart.html`
 
 * Displays selected food items
-* Shows quantity and total amount
-* Includes Checkout button
+* Supports quantity management
+* Calculates the total price dynamically
+* Provides checkout interface
 
-### style.css
+### 🎨 Styling — `style.css`
 
-* Contains common styling for all pages
-* Implements responsive design
-* Styles navigation bars, cards, buttons, and layouts
+* Defines the visual design of the application
+* Provides responsive layouts
+* Styles navigation, cards, buttons, forms, and other UI elements
 
-### script.js
+### ⚙️ JavaScript — `script.js`
 
-* Handles cart functionality using localStorage
-* Adds products to cart
-* Updates quantities dynamically
+* Handles cart operations
+* Updates product quantities
+* Calculates total prices
+* Uses `localStorage` for cart persistence
 * Performs client-side form validation
+* Handles dynamic UI interactions
 
 ---
 
-## JavaScript Functionalities
+## 📸 Screenshots
 
-* Client-side Form Validation
-* DOM Manipulation
-* LocalStorage Usage
-* Dynamic Cart Updates
-* Total Price Calculation
+### 🏠 Home Page
 
----
+![FoodExpress Home Page](screenshots/homepage3.jpg)
 
-## Screenshots
+### 🔐 Login Page
 
-The project contains screenshots of:
+![FoodExpress Login Page](screenshots/loginpage3.jpg)
 
-* Home Page
-* Login Page
-* Registration Page
-* Food Catalog Page
-* Shopping Cart Page
+### 📝 Registration Page
 
----
+![FoodExpress Registration Page](screenshots/registerpage3.jpg)
 
-## Sources Used
+### 🍕 Food Catalog
 
-* MDN Web Docs
-* W3Schools
-* JavaScript Documentation
-* Unsplash (Food Images)
-* ChatGPT for debugging and UI improvements
+![FoodExpress Food Catalog](screenshots/menu%20page3.1.jpg)
+
+### 🛒 Shopping Cart
+
+![FoodExpress Shopping Cart](screenshots/cart%20page3.jpg)
 
 ---
 
-## Conclusion
+## 💾 Data Storage
 
-The Food Express application was successfully developed using HTML5, CSS3, and JavaScript with responsive web design principles. The project demonstrates frontend web development concepts such as responsive layouts, client-side validation, DOM manipulation, and shopping cart functionality using localStorage.
+FoodExpress uses the browser's **localStorage** for client-side cart persistence.
 
+This allows the application to:
 
+* Store selected food items
+* Preserve cart quantities
+* Retrieve cart data between page interactions
+* Update cart contents dynamically
+
+No external database is required for the current frontend implementation.
+
+---
+
+## 🚀 Future Enhancements
+
+* Backend REST API integration
+* Database integration
+* Secure server-side authentication
+* Online payment integration
+* Order tracking
+* Restaurant/vendor management
+* User order history
+* Backend-based user accounts
+
+---
+
+## 📚 Learning Outcomes
+
+This project provided practical experience with:
+
+* HTML5 semantic structure
+* CSS3 responsive design
+* JavaScript fundamentals
+* DOM manipulation
+* Client-side form validation
+* Browser `localStorage`
+* Dynamic shopping cart implementation
+* Responsive UI development
+* Frontend project organization
+* Git and GitHub workflow
+* Vercel deployment
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+See the [`LICENSE`](LICENSE) file for details.
+
+---
+
+## 👩‍💻 Author
+
+**Akshitha Gasikanti**
+
+B.Tech Information Technology Student
+Aspiring Software Engineer
+
+GitHub: [Akshitha363](https://github.com/Akshitha363)
